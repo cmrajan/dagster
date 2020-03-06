@@ -3,7 +3,11 @@
 /* eslint-disable */
 // This file was automatically generated and should not be edited.
 
-import { ScheduleTickStatus, PipelineRunStatus, ScheduleStatus } from "./../../types/globalTypes";
+import {
+  ScheduleTickStatus,
+  PipelineRunStatus,
+  ScheduleStatus
+} from "./../../types/globalTypes";
 
 // ====================================================
 // GraphQL fragment: ScheduleFragment
