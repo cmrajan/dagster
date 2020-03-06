@@ -23,6 +23,7 @@ ScheduleTickTable = db.Table(
     db.Column('schedule_name', db.String),
     db.Column('status', db.String(63)),
     db.Column('tick_body', db.String),
+    db.Column('timestamp', db.types.TIMESTAMP),
     db.Column('create_timestamp', db.DateTime, server_default=db.text('CURRENT_TIMESTAMP')),
     db.Column('update_timestamp', db.DateTime, server_default=db.text('CURRENT_TIMESTAMP')),
 )
