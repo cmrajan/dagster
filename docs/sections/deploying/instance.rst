@@ -9,7 +9,7 @@ and how to launch new runs.
 Locally, an instance usually corresponds to a single Dagit process. In production, you'll want all
 of your processes to share a single instance config so they can effectively share information.
 
-The instance is pluggable and configurable, and users can write their own classes to extend its 
+The instance is pluggable and configurable, and users can write their own classes to extend its
 functionality.
 
 
@@ -59,7 +59,7 @@ store this information on the local filesystem, laid out like this:
 
 The ``runs.db`` and ``{run_id}.db`` files are SQLite database files recording information about
 pipeline runs and per-run event logs respectively. The ``{pipeline_name}_{run_id}.json`` files
-store information about schedules associated with pipelines. The ``compute_logs`` directories (one 
+store information about schedules associated with pipelines. The ``compute_logs`` directories (one
 per pipeline run) contain the stdout and stderr logs from the execution of the compute functions
 of each solid in a pipeline. And the ``intermediates`` directories contain serialized
 representations of the outputs of each solid, enabling incremental recomputation of pipeline
@@ -105,7 +105,7 @@ Per-pipeline run configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you run your pipelines on your deployed instance, you'll need to make sure that they are
-configured appropriately. 
+configured appropriately.
 
 For example, if you'd like your production pipelines to run using the built-in multiprocess
 executor (taking advantage of the big box to which you've deployed Dagit), rather than the
