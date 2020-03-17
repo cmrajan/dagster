@@ -9,6 +9,8 @@ from .system import SystemComputeExecutionContext
 
 
 class AbstractComputeExecutionContext(six.with_metaclass(ABCMeta)):  # pylint: disable=no-init
+    '''Base class for solid context implemented by ComputeExecutionContext and DagstermillInNotebookExecutionContext'''
+
     @abstractmethod
     def has_tag(self, key):
         '''Implement this method to check if a logging tag is set.'''
@@ -43,6 +45,8 @@ class AbstractComputeExecutionContext(six.with_metaclass(ABCMeta)):  # pylint: d
 
 
 class ComputeExecutionContext(StepExecutionContext, AbstractComputeExecutionContext):
+    '''The ``context`` object available to solid compute logic.'''
+
     __slots__ = ['_system_compute_execution_context']
 
     def __init__(self, system_compute_execution_context):
@@ -55,8 +59,10 @@ class ComputeExecutionContext(StepExecutionContext, AbstractComputeExecutionCont
 
     @property
     def solid_config(self):
+        '''The parsed config specific to this solid.'''
         return self._system_compute_execution_context.solid_config
 
     @property
     def pipeline_run(self):
+        '''The current PipelineRun'''
         return self._system_compute_execution_context.pipeline_run

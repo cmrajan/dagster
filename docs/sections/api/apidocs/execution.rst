@@ -25,9 +25,15 @@ Executing solids
 
 Execution context
 -----------------
+.. currentmodule:: dagster.core.execution.context.compute
 
-.. autoclass:: SystemComputeExecutionContext
+.. autoclass:: ComputeExecutionContext
    :members:
+
+.. autoclass:: AbstractComputeExecutionContext
+   :members:
+
+.. currentmodule:: dagster
 
 Pipeline and solid results
 --------------------------
